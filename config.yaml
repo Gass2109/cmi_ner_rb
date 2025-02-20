@@ -1,0 +1,22 @@
+INPUT_FOLDER: "input"
+OUTPUT_FOLDER: "output"
+
+ENTITY_MAPPING:
+  "Party A": "Counterparty"
+  "Initial Valuation Date": "Initial Valuation Date"
+  "Notional Amount (N)": "Notional"
+  "Valuation Date": "Valuation Date"
+  "Termination Date": "Maturity"
+  "Underlying": "Underlying"
+  "Coupon (C)": "Coupon"
+  "Barrier (B)": "Barrier"
+  "Business Day": "Calendar"
+
+ENTITY_PATTERNS:
+  "Notional": "([A-Z]{3} \\d[\\d,.]* (million|billion)?)"
+  "Coupon": "(\\d+\\.?\\d*%)"
+  "Barrier": "(\\d+\\.?\\d*% of Shareini)"
+  "Valuation Date": "(\\d{1,2} \\w+ \\d{4})"
+  "Maturity": "(\\d{1,2} \\w+ \\d{4})"
+  "Initial Valuation Date": "(\\d{1,2} \\w+ \\d{4})"
+  "Calendar": "(\\w+)"
